@@ -1,0 +1,204 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navList{
+    list-style-type: none;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+body{
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    min-height: 100vh; 
+    margin: 0;
+
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    overflow-x: none;
+     
+}
+.navcontainer{
+    width: 100%;
+    background-color: rgba(8, 8, 117, 0.781);
+    min-height:60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;   
+}
+#navtext{
+    font-size: 2.4rem;
+    color: white;
+}
+nav{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+#navitems{
+    display: flex;
+    gap: 25px;
+    font-size: 1.5rem;
+}
+
+.footerBox{
+    width: 100%;
+    background-color: rgba(8, 8, 117, 0.781);
+    min-height:25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+ 
+}
+
+.footerBox p{
+    color: azure;
+}
+.contentBox{
+    width: 70%;
+    margin: auto;
+    padding: 40px; 
+    background-color: rgb(197, 197, 197);
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    box-shadow: 1px 1px 30px black;
+}
+.items{
+    display: flex;
+    align-items:center;
+    gap:50px;
+
+}
+.rightBox img{
+    height: 350px;
+    border-radius: 20px;
+   
+}
+.rightBox{
+    position: relative;
+    transition: all 0.4s linear 0s;
+}
+.rightBox .overLay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(83, 83, 83, 0.596); 
+    border-radius: 20px;
+    pointer-events: none; 
+    opacity: 0; 
+    transition: opacity 0.4s linear; 
+}
+
+.rightBox:hover .overLay {
+    opacity: 1;
+}
+
+.rightBox:hover{
+    transform: scale(1.1);
+}
+    
+.leftBox{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.recipeText {
+    text-align: justify;
+}
+ol li, ul li {
+    margin: 5px; 
+}
+h2{
+    font-size: 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .container {
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .contentBox {
+        width: 90%;
+        padding: 20px; /* Reduced padding */
+    }
+
+    .items {
+        flex-direction: column; /* Stack items vertically */
+        gap: 30px; /* Adjust gap */
+    }
+
+    #navList {
+        flex-direction: column; /* Stack nav items vertically */
+        font-size: 1.5rem; /* Adjust font size */
+    }
+}
+
+@media (max-width: 768px) {
+    #navList {
+        font-size: 1.2rem; /* Smaller font size */
+    }
+
+    #navitems {
+        flex-direction: column; /* Stack nav links vertically */
+        gap: 15px; /* Adjust gap */
+    }
+
+    .contentBox {
+        width: 95%; /* Adjust width */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .rightBox img {
+        height: 250px; /* Adjust image height */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Smaller font size */
+    }
+
+    .items {
+        gap: 20px; /* Adjust gap */
+    }
+}
+
+@media (max-width: 480px) {
+    #navList {
+        font-size: 1rem; /* Further reduced font size */
+    }
+
+    #navitems {
+        gap: 10px; /* Adjust gap */
+    }
+
+    .contentBox {
+        width: 100%; /* Full width */
+        padding: 5px; /* Minimal padding */
+    }
+
+    .rightBox img {
+        height: 200px; /* Further adjust image height */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Further reduced font size */
+    }
+
+    .items {
+        gap: 10px; /* Adjust gap */
+    }
+}
+
